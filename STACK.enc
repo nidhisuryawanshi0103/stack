@@ -1,0 +1,76 @@
+ #include<iostream.h>
+ #include<conio.h>
+ #include<process.h>
+ void push();
+ void pop();
+ void display();
+ int top;
+ int a[5];
+ void main()
+ {
+ clrscr();
+ int choice;
+ char ch;
+ top=-1;
+ do
+ {
+ cout<<"1.push"<<endl;
+ cout<<"2.pop"<<endl;
+ cout<<"3.display"<<endl;
+ cout<<"4.exit"<<endl;
+ cout<<"enter your choice";
+ cin>>choice;
+ switch(choice)
+ {
+ case1:
+ push();
+ break;
+ case2:
+ pop();
+ break;
+ case3:
+ display();
+ break;
+ case4:
+ exit(0);
+ default:
+ cout<<"bad choice";
+ }
+ cout<<"do you want to continue y/n";
+ ch=getch();
+ }
+ while(ch=='y')
+ }
+ void push()
+ {
+ int item;
+ if (top==4)
+ cout<<"stack full";
+ else
+ {
+ cout<<"enter the item to be inserted";
+ cin>>item;
+ top=top+1;
+ a[top]=item;
+ }
+ }
+ void pop()
+ {
+ int item;
+ if (top==-1)
+ cout<<"stack is empty";
+ else
+ {
+ item=a[top]
+ top=top-1;
+ cout<<"item is deleted";
+ cout<<"item";
+ }
+ }
+ void display()
+ {
+ int i;
+ for(i=top;i>=0;i--)
+ cout<<a[i];
+ cout<<endl;
+ }
